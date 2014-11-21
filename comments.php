@@ -55,7 +55,7 @@
 		<p>Du m&aring;ste vara <a href="<?php echo wp_login_url( get_permalink() ); ?>">inloggad</a> f&ouml;r att kommentera.</p>
 	<?php else : ?>
 
-	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" class="comment-form">
+	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" class="comment-form hide">
 
 		<?php if ( is_user_logged_in() ) : ?>
 

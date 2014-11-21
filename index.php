@@ -25,6 +25,7 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+<div class="content">
     <div class="scroll-wrapper">
     <?php $i = 1; ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -75,20 +76,22 @@
 
     <?php endif; ?>
 
-    <div class="navigation">
-        <?php next_posts_link(' &laquo; &Auml;ldre Inl&auml;gg ') ?>
-    </div>
+        <div class="navigation">
+            <?php next_posts_link(' &laquo; &Auml;ldre Inl&auml;gg ') ?>
+        </div>
 
     </div> <!-- End Scroll wrapper -->
+</div>
 
 
 
     <?php wp_footer(); ?>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/jquery.infinitescroll.min.js"></script>
+    <!-- <script src="<? //php bloginfo('template_url'); ?>/js/jquery.infinitescroll.min.js"></script> -->
+    <script src="<?php bloginfo('template_url'); ?>/js/jquery.jscroll.min.js"></script>
     <script>
         $( document ).ready(function() {
-            imagepath = "<?php echo bloginfo('template_url') . '/img/spinner.gif'; ?>"
+            imagepath = "<img src='<?php echo bloginfo('template_url') . '/img/spinner.gif'; ?>' alt='Loading' />"
         });
     </script>
     <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
