@@ -115,7 +115,7 @@ form.comment-form {
 
 body {
 	font-family: $text_font;
-	background-color: $color5;
+	background-color: $color1;
 }
 
 
@@ -253,3 +253,203 @@ body.page-template-archive-list-php {
 	}
 
 }
+
+
+form.comment-form {
+	text-align: center;
+
+	label {
+		margin: 0 auto;
+	}
+
+	textarea {
+		max-width: 90%;
+	}
+
+}
+
+header {
+	height: 250px;
+	max-width: 1000px;
+	margin: 0 auto;
+
+	h1 {
+		text-align: center;
+		position: relative;
+		font-size: 5em;
+		z-index: 10;
+		font-weight: 700;
+		margin: 0;
+
+		.neo {
+			color: $color3;
+		}
+
+		.and {
+			color: $color1;
+		}
+
+		.nellie {
+			color: $color5;
+		}
+	}
+
+	menu.main-menu {
+		padding: 0;
+		margin: 0;
+		position: relative;
+		z-index: 10;
+		text-align: center;
+
+		ul {
+			margin: 0 auto;
+			padding: 0;
+			list-style-type: none;
+			max-width: 1000px;
+
+
+			li {
+				display: inline;
+				padding: 5px 0;
+
+				a {
+					text-decoration: none;
+					font-family: $head_font;
+					color: $color1;
+					font-size: 3em;
+				}
+
+				a:hover {
+					text-decoration: underline;;
+				}
+			}
+		}
+	}
+
+	.circle-wrap {
+		position: relative;
+		top: -140px;
+		z-index: 1;
+	}
+	
+	.circle,.menu-circle {
+		border-radius: 100%;
+	}
+
+	.menu-circle {
+		margin: 0 auto;
+		height: auto;
+
+
+		.menu-circle01 {
+			left: -200px;
+			top: -80px;
+			width: 250px;
+			height: 250px;
+			position: relative;
+			background: #FFF;
+		}
+		.menu-circle02 {
+			margin: 0 auto;
+			top: -350px;
+			width: 300px;
+			height: 300px;
+			position: relative;
+			background: #FFF;
+		}
+		.menu-circle03 {
+			top: -630px;
+			left: 200px;
+			width: 250px;
+			height: 250px;
+			position: relative;
+			background: #FFF;
+		}
+	}
+
+	.circle01 {
+		top: -650px;
+		left: -340px;
+		width: 80px;
+		height: 80px;
+		background: $color2;
+		position: relative;
+		margin: 0 auto;
+	}
+	.circle02 {
+		top: -880px;
+		left: -410px;
+		width: 100px;
+		height: 100px;
+		background:$color3;
+		position: relative;
+		margin: 0 auto;
+	}
+	.circle03 {
+		top: -850px;
+		left: -470px;
+		width: 110px;
+		height: 110px;
+		background: #FFF;
+		position: relative;
+		margin: 0 auto;
+	}
+	.circle04 {
+		top: -950px;
+		right: -380px;
+		width: 100px;
+		height: 100px;
+		background: #FFF;
+		position: relative;
+		margin: 0 auto;
+	}
+	.circle05 {
+		top: -1260px;
+		right: -420px;
+		width: 125px;
+		height: 125px;
+		background: #FFF;
+		position: relative;
+		margin: 0 auto;
+	}
+	.circle06 {
+		top: -1250px;
+		right: -500px;
+		width: 80px;
+		height: 80px;
+		background: $color4;
+		position: relative;
+		margin: 0 auto;
+	}
+	.circle07 {
+		top: -1200px;
+		right: -250px;
+		width: 75px;
+		height: 75px;
+		background: $color5;
+		position: relative;
+		margin: 0 auto;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+
+.postheader {
+	text-align: center;
+}
+
+.commentheader {
+	max-width: 70%;
+}
+
+}
+
+@media screen and (max-width: 1100px) {
+
+.circle {
+	display:none;
+}
+
+}
+

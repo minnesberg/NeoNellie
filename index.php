@@ -6,7 +6,26 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?php wp_title(); ?></title>
+        <title>
+               <?php
+                  if (function_exists('is_tag') && is_tag()) {
+                     single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
+                  elseif (is_archive()) {
+                     wp_title(''); echo ' Archive - '; }
+                  elseif (is_search()) {
+                     echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
+                  elseif (!(is_404()) && (is_single()) || (is_page())) {
+                     wp_title(''); echo ' - '; }
+                  elseif (is_404()) {
+                     echo 'Not Found - '; }
+                  if (is_home()) {
+                     bloginfo('name'); echo ' - '; bloginfo('description'); }
+                  else {
+                      bloginfo('name'); }
+                  if ($paged>1) {
+                     echo ' - page '. $paged; }
+               ?>
+        </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,6 +44,27 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+
+        <header>
+            <h1><span class="neo">Neo</span><span class="and"> & </span><span class="nellie">Nellie</span></h1>
+            <menu class="main-menu">
+                <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+            </menu>
+            <div class="circle-wrap">
+                <div class="menu-circle">
+                    <div class="menu-circle menu-circle01"></div>
+                    <div class="menu-circle menu-circle02"></div>
+                    <div class="menu-circle menu-circle03"></div>
+                </div>
+                <div class="circle circle01"></div>
+                <div class="circle circle02"></div>
+                <div class="circle circle03"></div>
+                <div class="circle circle04"></div>
+                <div class="circle circle05"></div>
+                <div class="circle circle06"></div>
+                <div class="circle circle07"></div>
+            </div>
+        </header>
 <div class="content">
     <div class="scroll-wrapper">
     <?php $i = 1; ?>

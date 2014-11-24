@@ -11,4 +11,9 @@ function posts_link_attributes() {
     return 'class="next-page"';
 }
 
+function register_menu() {
+  register_nav_menu('main-menu',__( 'Main Menu' ));
+}
+add_action( 'init', 'register_menu' );
+
 ?>

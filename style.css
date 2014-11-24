@@ -764,7 +764,7 @@ form.comment-form {
 
 body {
   font-family: "Maven Pro", sans-serif;
-  background-color: #F7A61B; }
+  background-color: #30A443; }
 
 img {
   display: block;
@@ -868,5 +868,147 @@ body.page-template-archive-list-php {
     text-align: center;
     font-family: "Amatic SC", cursive;
     font-size: 3em; }
+
+form.comment-form {
+  text-align: center; }
+  form.comment-form label {
+    margin: 0 auto; }
+  form.comment-form textarea {
+    max-width: 90%; }
+
+header {
+  height: 250px;
+  max-width: 1000px;
+  margin: 0 auto; }
+  header h1 {
+    text-align: center;
+    position: relative;
+    font-size: 5em;
+    z-index: 10;
+    font-weight: 700;
+    margin: 0; }
+    header h1 .neo {
+      color: #EB4A24; }
+    header h1 .and {
+      color: #30A443; }
+    header h1 .nellie {
+      color: #F7A61B; }
+  header menu.main-menu {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    text-align: center; }
+    header menu.main-menu ul {
+      margin: 0 auto;
+      padding: 0;
+      list-style-type: none;
+      max-width: 1000px; }
+      header menu.main-menu ul li {
+        display: inline;
+        padding: 5px 0; }
+        header menu.main-menu ul li a {
+          text-decoration: none;
+          font-family: "Amatic SC", cursive;
+          color: #30A443;
+          font-size: 3em; }
+        header menu.main-menu ul li a:hover {
+          text-decoration: underline; }
+  header .circle-wrap {
+    position: relative;
+    top: -140px;
+    z-index: 1; }
+  header .circle, header .menu-circle {
+    border-radius: 100%; }
+  header .menu-circle {
+    margin: 0 auto;
+    height: auto; }
+    header .menu-circle .menu-circle01 {
+      left: -200px;
+      top: -80px;
+      width: 250px;
+      height: 250px;
+      position: relative;
+      background: #FFF; }
+    header .menu-circle .menu-circle02 {
+      margin: 0 auto;
+      top: -350px;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      background: #FFF; }
+    header .menu-circle .menu-circle03 {
+      top: -630px;
+      left: 200px;
+      width: 250px;
+      height: 250px;
+      position: relative;
+      background: #FFF; }
+  header .circle01 {
+    top: -650px;
+    left: -340px;
+    width: 80px;
+    height: 80px;
+    background: #34A8C8;
+    position: relative;
+    margin: 0 auto; }
+  header .circle02 {
+    top: -880px;
+    left: -410px;
+    width: 100px;
+    height: 100px;
+    background: #EB4A24;
+    position: relative;
+    margin: 0 auto; }
+  header .circle03 {
+    top: -850px;
+    left: -470px;
+    width: 110px;
+    height: 110px;
+    background: #FFF;
+    position: relative;
+    margin: 0 auto; }
+  header .circle04 {
+    top: -950px;
+    right: -380px;
+    width: 100px;
+    height: 100px;
+    background: #FFF;
+    position: relative;
+    margin: 0 auto; }
+  header .circle05 {
+    top: -1260px;
+    right: -420px;
+    width: 125px;
+    height: 125px;
+    background: #FFF;
+    position: relative;
+    margin: 0 auto; }
+  header .circle06 {
+    top: -1250px;
+    right: -500px;
+    width: 80px;
+    height: 80px;
+    background: #7CBF42;
+    position: relative;
+    margin: 0 auto; }
+  header .circle07 {
+    top: -1200px;
+    right: -250px;
+    width: 75px;
+    height: 75px;
+    background: #F7A61B;
+    position: relative;
+    margin: 0 auto; }
+
+@media screen and (max-width: 768px) {
+  .postheader {
+    text-align: center; }
+
+  .commentheader {
+    max-width: 70%; } }
+@media screen and (max-width: 1100px) {
+  .circle {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
