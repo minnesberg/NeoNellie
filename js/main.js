@@ -28,4 +28,22 @@ $( document ).ready(function() {
 	    callback: formToggle
 	});
 
+		$("header>h1>a").click(function(e){
+			console.log("click")
+			e.preventDefault();
+			if ($(window).width() <= 768){
+				var menu = $("header .main-menu");
+				if (menu.hasClass("up")) {
+					menu.removeClass("up").addClass("down");
+					menu.slideDown();
+					console.log("hrj")
+					
+				} else {
+					menu.removeClass("down").addClass("up");
+					menu.slideUp();
+					console.log("hr222j")
+				}
+			}
+		});
+
 });

@@ -269,7 +269,8 @@ form.comment-form {
 }
 
 header {
-	height: 250px;
+	position: relative;
+	height: 325px;
 	max-width: 1000px;
 	margin: 0 auto;
 
@@ -316,7 +317,8 @@ header {
 					text-decoration: none;
 					font-family: $head_font;
 					color: $color1;
-					font-size: 3em;
+					font-size: 50px;
+					padding: 0 5px;
 				}
 
 				a:hover {
@@ -329,7 +331,8 @@ header {
 	.circle-wrap {
 		position: relative;
 		top: -140px;
-		z-index: 1;
+		z-index: -1;
+
 	}
 	
 	.circle,.menu-circle {
@@ -338,8 +341,7 @@ header {
 
 	.menu-circle {
 		margin: 0 auto;
-		height: auto;
-
+		z-index: -1;
 
 		.menu-circle01 {
 			left: -200px;
@@ -441,6 +443,52 @@ header {
 
 .commentheader {
 	max-width: 70%;
+}
+
+.content {
+	padding-top: 40px;
+}
+
+header {
+	z-index: 10;
+	height: auto;
+	position: fixed;
+	width: 100%;
+
+	background: #000;
+	
+	h1 {
+		margin: 0 auto;
+		font-size: 30px;
+
+		a {
+			text-decoration: none;
+			font-size: 30px;
+			padding: 0 20%;
+		}
+
+	}
+
+	.main-menu {
+		display:none;
+		ul {
+			
+
+			li {
+				display: block !important;
+
+				a {
+					font-size: 35px !important;
+					padding: 0 20% !important;
+				}
+			}
+		}
+	}
+
+	.circle-wrap {
+		display:none;
+	}
+
 }
 
 }
