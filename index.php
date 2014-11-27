@@ -19,13 +19,14 @@
 
         <div class="post-wrapper <?php echo $postclass; ?>">
             
-            <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+            <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
                 
-                <?php $date = explode(" ",(get_the_date("d M"))); ?>
+                <?php $date = explode(" ",(get_the_date("d M y"))); ?>
 
                 <div class="date">
                     <div class="day"><?php echo $date[0]; ?></div>
                     <div class="month"><?php echo $date[1]; ?></div>
+                    <div class="year">-<?php echo $date[2]; ?></div>
                 </div>
 
                 <h2><?php the_title(); ?></h2>
@@ -37,7 +38,7 @@
                     comments_template(); 
                 ?>
 
-            </div> <!-- End post -->
+            </acticle> <!-- End post -->
 
         </div> <!-- End post-wrapper -->
      
@@ -47,7 +48,8 @@
 
     <?php else : ?>
         
-        <h2>Not Found</h2>
+        <h2 class="notfound">Ops prova igen !<br>Eller sök på vad du letar efter.</h2>
+        <?php get_search_form(); ?>
 
     <?php endif; ?>
 

@@ -8,16 +8,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>
                <?php
-                  if (function_exists('is_tag') && is_tag()) {
-                     single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
-                  elseif (is_archive()) {
-                     wp_title(''); echo ' Archive - '; }
+                  if (is_archive()) {
+                     wp_title(''); echo ' Arkiv - '; }
                   elseif (is_search()) {
-                     echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
+                     echo 'Sökresultat för &quot;'.wp_specialchars($s).'&quot; - '; }
                   elseif (!(is_404()) && (is_single()) || (is_page())) {
                      wp_title(''); echo ' - '; }
                   elseif (is_404()) {
-                     echo 'Not Found - '; }
+                     echo 'Inga resultat - '; }
                   if (is_home()) {
                      bloginfo('name'); echo ' - '; bloginfo('description'); }
                   else {
@@ -30,7 +28,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <script src="<?php bloginfo('template_url'); ?>/js/modernizr-2.6.2.min.js"></script>
+        <!-- <script src="<?php bloginfo('template_url'); ?>/js/modernizr-2.6.2.min.js"></script> -->
+
         <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>

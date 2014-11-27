@@ -1,7 +1,16 @@
+<?php
+/*
+Template Name: Template-Videos
+*/
+?>
+
 <?php get_header(); ?>
-    <div class="content">
+<div class="content">
     <div class="scroll-wrapper">
     <?php $i = 1; ?>
+    
+    <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+    <?php query_posts("category_name=videos&paged=$paged"); ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
         <?php if ($i % 5 == 1) {
@@ -18,7 +27,7 @@
 
         <div class="post-wrapper <?php echo $postclass; ?>">
             
-            <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+            <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
                 
                 <?php $date = explode(" ",(get_the_date("d M y"))); ?>
 
@@ -37,7 +46,7 @@
                     comments_template(); 
                 ?>
 
-            </div> <!-- End post -->
+            </article> <!-- End post -->
 
         </div> <!-- End post-wrapper -->
      
@@ -45,17 +54,20 @@
     <?php $i++; ?>
     <?php endwhile; ?>
 
-    <?php else : ?>
+    <?php  else : ?>
         
-        <h2 class="notfound">Ops prova igen !<br>Eller sök på vad du letar efter.</h2>
-        <?php get_search_form(); ?>
+		<?php
+		header("Location: 404"); /* Redirect browser */
+		exit();
+		?>
 
     <?php endif; ?>
 
     <div class="navigation">
-        <?php next_posts_link(' &laquo; &Auml;ldre Inl&auml;gg ') ?>
+        <?php next_posts_link('Older') ?>
     </div>
+	
 
     </div> <!-- End Scroll wrapper -->
-    </div> <!-- End content wrapper -->
+</div>
 <?php get_footer(); ?>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Archives-list
+Template Name: Template-Arkiv
 */
 ?>
 <?php get_header(); ?>
@@ -12,7 +12,8 @@ Template Name: Archives-list
     <div class="scroll-wrapper">
 
 <div class="post-wrapper">
-            
+        
+        <h1><?php the_title(); ?></h1>
         <ul>
 			<?php $args = array(
 				"type" => "monthly",
