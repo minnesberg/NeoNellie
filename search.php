@@ -5,13 +5,17 @@
 
     <?php $i = 1; ?>
 
-
 	<?php if ($wp_query->found_posts == "0") { ?>
 
 	<?php } else { ?>
 		<h1 class="result">Sökningen "<?php echo get_search_query(); ?>" gav dig <?php echo $wp_query->found_posts; ?> träffar.</h1>
+        <h2><?php echo '<p><a href="' . get_bloginfo('url') . '?s=' . get_search_query() . '&orderby=post_date&order=desc">Order results by date<a></p>'; ?></h2>
 	<?php } ?>
 	<div class="scroll-wrapper">
+    <?php 
+        global $query_string;
+        query_posts($query_string . '&orderby=post_date&order=desc');
+    ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
         <?php if ($i % 5 == 1) {
@@ -41,6 +45,11 @@
                 <h2><?php the_title(); ?></h2>
 
                 <?php the_content(); ?>
+                
+                <?php 
+                    $withcomments = 1;
+                    comments_template(); 
+                ?>
 
             </article> <!-- End post -->
 

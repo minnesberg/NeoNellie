@@ -46,7 +46,7 @@
 
         <header>
             <h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><span class="neo">Neo</span><span class="and"> & </span><span class="nellie">Nellie</span></a></h1>
-            <menu class="main-menu up">
+            <menu class="main-menu">
                 <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
             </menu>
             <div class="circle-wrap">
